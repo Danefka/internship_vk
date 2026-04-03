@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: internship_vk
+
+tarantool:
+  host: ${TARANTOOL_HOST:localhost}
+  port: ${TARANTOOL_PORT:3301}
+  username: ${TARANTOOL_USERNAME:app}
+  password: ${TARANTOOL_PASSWORD:app123}
+
+grpc:
+  server:
+    port: 9090

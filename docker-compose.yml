@@ -1,0 +1,18 @@
+services:
+  tarantool:
+    build:
+      context: ./tarantool
+    ports:
+      - "3301:3301"
+
+  app:
+    build: .
+    depends_on:
+      - tarantool
+    ports:
+      - "9090:9090"
+    environment:
+      TARANTOOL_HOST: tarantool
+      TARANTOOL_PORT: 3301
+      TARANTOOL_USERNAME: app
+      TARANTOOL_PASSWORD: app123
