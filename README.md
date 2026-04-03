@@ -1,4 +1,4 @@
-# vk_internship
+# internship_vk
 
 Java gRPC key-value service built as a test assignment for the VK Internship.
 
