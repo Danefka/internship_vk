@@ -28,22 +28,22 @@ You can test the service using grpcurl or any gRPC client.
 
 Put:
 ```bash
-grpcurl -plaintext -d '{ "key": "test", "value": "hello" }' localhost:9090 KvService/Put
+grpcurl -plaintext -d '{"kv":{ "key": "test", "value": "hello" }}' localhost:9090 kv.KvService/Put
 ```
 Get:
 ```bash
-grpcurl -plaintext -d '{ "key": "test" }' localhost:9090 KvService/Get
+grpcurl -plaintext -d '{ "key": "test" }' localhost:9090 kv.KvService/Get
 ```
 
 Delete:
 ```bash
-grpcurl -plaintext -d '{ "key": "test" }' localhost:9090 KvService/Delete
+grpcurl -plaintext -d '{ "key": "test" }' localhost:9090 kv.KvService/Delete
 ```
 Count:
 ```bash
-grpcurl -plaintext localhost:9090 KvService/Count
+grpcurl -plaintext localhost:9090 kv.KvService/Count
 ```
 Range:
 ```bash
-grpcurl -plaintext -d '{ "from": "a", "to": "z" }' localhost:9090 KvService/Range
+grpcurl -plaintext -d '{ "key_from": "a", "key_to": "z" }' localhost:9090 kv.KvService/Range
 ```
